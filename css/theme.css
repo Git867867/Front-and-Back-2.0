@@ -1,0 +1,137 @@
+/*  СВЕТЛАЯ ТЕМА (по умолчанию)  */
+[data-theme="light"] {
+    --color-primary: #2c3e50;
+    --color-secondary: #3498db;
+    --color-accent: #e74c3c;
+    --color-light: #ecf0f1;
+    --color-dark: #34495e;
+    --color-text: #2c3e50;
+    --color-white: #ffffff;
+    --color-gray: #95a5a6;
+    --color-background: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-border: #dee2e6;
+}
+
+/*  ТЕМНАЯ ТЕМА  */
+[data-theme="dark"] {
+    --color-primary: #4361ee;
+    --color-secondary: #3a0ca3;
+    --color-accent: #f72585;
+    --color-light: #1a1a2e;
+    --color-dark: #0f3460;
+    --color-text: #e2e8f0;
+    --color-white: #1a1a2e;
+    --color-gray: #94a3b8;
+    --color-background: #121212;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+    
+    /* Переопределение Bootstrap цветов для темной темы */
+    --bs-body-bg: var(--color-background);
+    --bs-body-color: var(--color-text);
+    --bs-primary: var(--color-primary);
+    --bs-secondary: var(--color-secondary);
+    --bs-light: var(--color-light);
+    --bs-dark: var(--color-dark);
+    --bs-border-color: var(--color-border);
+}
+
+/* Общие стили для темной темы */
+[data-theme="dark"] {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Навигация */
+[data-theme="dark"] .navbar-dark.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* Карточки */
+[data-theme="dark"] .card {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .card-header {
+    background-color: var(--color-primary) !important;
+    border-bottom-color: var(--color-border);
+}
+
+/* Текст */
+[data-theme="dark"] .text-muted {
+    color: var(--color-gray) !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--color-text) !important;
+}
+
+/* Кнопки */
+[data-theme="dark"] .btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: transparent;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover,
+[data-theme="dark"] .btn-outline-primary.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-outline-light {
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .btn-outline-light:hover {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+/* Процесс-бары */
+[data-theme="dark"] .progress {
+    background-color: var(--color-light);
+}
+
+/* Формы */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--color-surface);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+/* Badges */
+[data-theme="dark"] .badge.bg-light {
+    background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
+}
+
+/* Ссылки в футере */
+[data-theme="dark"] footer a.text-white {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] footer a.text-white:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Анимация переключения темы */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-transition * {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
